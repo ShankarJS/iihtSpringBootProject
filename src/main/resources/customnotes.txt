@@ -1,0 +1,57 @@
+eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBZG1pbiIsImV4cCI6MTY2OTE5MjM1OCwiaWF0IjoxNjY5MTg3ODU4fQ.Wuxwst56hmdppxOvb2gmi8THf9WViuAZFFsatGUR7ZyqIV9Lhfe2HDBTdIa_6B8jOIeTdN-8Lgagd4o_rlhXOQ
+
+{
+        "logo": "MyLogo",
+        "title": "DSA Made Easy part 2",
+        "category": "Programming Algorithms",
+        "price": 505.0,
+        "author": "Narsimha Karumanchi",
+        "publisher": "CareerMonk",
+        "date": "2016-01-26",
+        "chapters_content": "Arrays, Strings, Stack, Queue, Tree, Map, Graph",
+        "active": true
+}
+
+
+				http://localhost:9092/
+findAll      	http://localhost:9092/allbooks
+findbookbyid    http://localhost:9092/book/{id}
+findbookbycategory	http://localhost:9092/book/{category}
+findbookbypublisher		http://localhost:9092/book/{publisher}
+findBookByAuthor    http://localhost:9092/book/{author}
+findBookByPrice   http://localhost:9092/book/{price}
+
+AuthorController
+addbook			http://localhost:9092/addbook
+updatebookById      http://localhost:9092/update/{id}
+blockbookbyid	
+unblockbookbyid
+
+
+eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBZG1pbiIsImV4cCI6MTY2OTIwMDIzNSwiaWF0IjoxNjY5MTk1NzM1fQ.6CzioChyWLuovQre39U-x6ZOxRD0pDVoLDsY-vXQi_AJOBqwH5ePMUeWZTsdKC_L20BaRkWQLLsUBRsNqtM9vw
+---------------------------------
+
+GET  /api/v1/digitalbooks/books/search?category&author&price&publisher   reader can search books 
+POST /api/v1/digitalbooks/books/buy	  payload: {bookId, reader {name, email}}   reader can buy book 
+GET  /api/v1/digitalbooks/readers/{emailId}/books 	reader can find all purchased books 
+GET  /api/v1/digitalbooks/readers/{emailId}/books/{bookId} reader can read book 
+POST /api/v1/digitalbooks/readers/{emailId}/books?pid   reader can find purchased book by paymentId 
+POST /api/v1/digitalbooks/readers/{emailId}/books/{bookId}/refund  reader can ask for refund within 24 hrs of payment 
+reader can download invoice
+
+POST /api/v1/digitalbooks/author/signup  author can create account 
+POST /api/v1/digitalbooks/author/login   author can login 
+POST /api/v1/digitalbooks/author/{authorId}/books   author can create book 
+PUT  /api/v1/digitalbooks/author/{authorId}/books/{bookId}   author can edit/block/unblock hist book 
+
+GET api/v1/digitalbooks/home Show home page 
+GET api/v1/digitalbooks/login Show login page 
+GET api/v1/digitalbooks/history  Show history page for reader to see all previous subscriptions/payments 
+
+//===================================
+	
+	
+	
+	
+	
+	
